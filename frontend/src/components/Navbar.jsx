@@ -55,9 +55,16 @@ export default function Navbar() {
                     className="cursor-pointer"
                 />
 
-                <button className="bg-lime-500 text-white py-3 px-6 rounded-full cursor-pointer">
-                    Get A Quote
-                </button>
+                <div className="relative group inline-flex items-center gap-2 py-3 px-6 rounded-full cursor-pointer text-white overflow-hidden bg-lime-500 border border-lime-500">
+                    {/* animated background */}
+                    <span className="absolute inset-0 bg-[#001819] w-0 group-hover:w-full transition-all duration-500 ease-in-out rounded-full z-0"></span>
+
+                    {/* button Text */}
+                    <p className="relative z-10 transition-all duration-300 text-white group-hover:text-white">
+                        Get A Quote
+                    </p>
+                </div>
+
             </div>
         </div>
     )
