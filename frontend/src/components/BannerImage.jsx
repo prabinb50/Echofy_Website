@@ -16,7 +16,7 @@ export default function BannerImage() {
                 <Navbar />
 
                 {/* horizontal line */}
-                <hr className='text-white opacity-20' />
+                <hr className='text-white opacity-15' />
             </div>
 
         </div>
