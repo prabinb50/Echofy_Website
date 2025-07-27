@@ -20,8 +20,8 @@ export default function BannerImage() {
                 <hr className='text-white opacity-15' />
             </div>
 
+            {/* banner content */}
             <div className='absolute inset-x-15 bottom-30'>
-                {/* banner content */}
                 <BannerContent />
             </div>
         </div>

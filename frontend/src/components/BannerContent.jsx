@@ -1,13 +1,28 @@
 import React from 'react'
-import { BiSolidLeaf } from 'react-icons/bi'
-import { MdOutlinePlayCircle } from 'react-icons/md'
+import { BiSolidLeaf } from 'react-icons/bi';
+import { MdOutlinePlayCircle } from 'react-icons/md';
+import { FaPinterestP, FaLinkedinIn } from 'react-icons/fa'
+import { RxCross2 } from 'react-icons/rx'
 
 export default function BannerContent() {
     return (
         <>
+            <div className='flex flex-col items-center gap-20 absolute -left-17 top-17 z-20'>
+                <div className='flex items-center gap-4 text-white transform -rotate-90'>
+                    <FaPinterestP className="cursor-pointer hover:text-lime-500" />
+                    <RxCross2 className="cursor-pointer hover:text-lime-500" />
+                    <FaLinkedinIn className="cursor-pointer hover:text-lime-500" />
+                </div>
+
+                {/* add a straight using div */}
+                <div className='h-px bg-white opacity-50 w-18 transform -rotate-90'></div>
+
+                <span className='text-white transform -rotate-90'>FOLLOW US</span>
+            </div>
+
             <p className='text-lime-500'>NATURAL ENVIRONMENT</p>
 
-            <h1 className='text-white font-AlbertSans text-6xl font-bold mt-3'>Be Safe Controls</h1>
+            <h1 className='text-white text-6xl font-bold mt-3'>Be Safe Controls</h1>
 
             <h1 className='text-white text-6xl font-bold mt-2'>Environments</h1>
 
