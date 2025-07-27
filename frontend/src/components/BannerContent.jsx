@@ -3,12 +3,18 @@ import { BiSolidLeaf } from 'react-icons/bi'
 import { MdOutlinePlayCircle } from 'react-icons/md'
 import { FaPinterestP, FaLinkedinIn } from 'react-icons/fa'
 import { RxCross2 } from 'react-icons/rx'
+import { motion } from 'framer-motion'
 
 export default function BannerContent() {
     return (
         <>
             {/* vertical social bar with icons and follow us label */}
-            <div className='flex flex-col items-center gap-20 absolute -left-17 top-17 z-20'>
+            <motion.div
+                className="flex flex-col items-center gap-20 absolute -left-17 top-17 z-20"
+                initial={{ y: 55, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1.3, ease: 'easeOut' }}
+            >
                 {/* social media icons */}
                 <div className='flex items-center gap-4 text-white transform -rotate-90'>
                     <FaPinterestP className="cursor-pointer hover:text-lime-500" />
@@ -21,22 +27,55 @@ export default function BannerContent() {
 
                 {/* follow us label */}
                 <span className='text-white transform -rotate-90'>FOLLOW US</span>
-            </div>
+            </motion.div>
 
             {/* section subtitle */}
-            <p className='text-lime-500'>NATURAL ENVIRONMENT</p>
+            <motion.p
+                className='text-lime-500'
+                initial={{ x: -55, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}>
+                NATURAL ENVIRONMENT
+            </motion.p>
 
             {/* main heading */}
-            <h1 className='text-white text-6xl font-bold mt-3'>Be Safe Controls</h1>
+            <motion.h1
+                className="text-white text-6xl font-bold mt-3"
+                initial={{ x: -55, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+            >
+                Be Safe Controls
+            </motion.h1>
 
             {/* sub heading */}
-            <h1 className='text-white text-6xl font-bold mt-2'>Environments</h1>
+            <motion.h1
+                className="text-white text-6xl font-bold mt-2"
+                initial={{ x: -55, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.6, delay: 0.7 }}
+            >
+                Environment
+            </motion.h1>
 
             {/* description text */}
-            <p className='text-white mt-5'>Professionally optimize interdependent intellectual interoperable <br />connect best practices.</p>
+            <motion.p
+                className="text-white mt-5"
+                initial={{ x: -55, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.9 }}
+            >
+                Professionally optimize interdependent intellectual interoperable <br />
+                connect best practices.
+            </motion.p>
 
             {/* buttons section */}
-            <div className='flex items-center gap-6 mt-10'>
+            <motion.div
+                className='flex items-center gap-6 mt-10'
+                initial={{ x: -55, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 1.2 }}
+            >
                 {/* let's talk button */}
                 <div className="relative group inline-flex items-center gap-2 py-3 px-10 rounded-full cursor-pointer text-white overflow-hidden bg-lime-500 border border-lime-500">
                     <span className="absolute inset-0 bg-[#001819] w-0 group-hover:w-full transition-all duration-500 ease-in-out rounded-full z-0 "></span>
@@ -53,7 +92,7 @@ export default function BannerContent() {
 
                 {/* watch video button */}
                 <button className='flex items-center gap-3 '>
-                    <div className='border rounded-full bg-[#355250] px-2.5 py-2.5 relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#355250] before:opacity-50 before:-z-10 before:rounded-full before:animate-ping cursor-pointer'>
+                    <div className='rounded-full bg-[#355250] px-2.5 py-2.5 relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#355250] before:opacity-50 before:-z-10 before:rounded-full before:animate-ping cursor-pointer'>
                         <MdOutlinePlayCircle
                             color='#79B900'
                             size={30}
@@ -63,7 +102,7 @@ export default function BannerContent() {
                     {/* watch video label */}
                     <p className='text-white'>Watch Video</p>
                 </button>
-            </div>
+            </motion.div>
         </>
     )
 }
