@@ -1,6 +1,6 @@
 import React from 'react'
 import Navbar from './Navbar'
-import BannerContent from './BannerContent';
+import BannerContent from './BannerContent'
 
 export default function BannerImage() {
     return (
@@ -20,7 +20,7 @@ export default function BannerImage() {
                 <hr className='text-white opacity-15' />
             </div>
 
-            {/* banner content */}
+            {/* banner content section */}
             <div className='absolute inset-x-15 bottom-30'>
                 <BannerContent />
             </div>
