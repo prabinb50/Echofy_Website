@@ -2,14 +2,10 @@ import React from "react";
 import { MdEco } from "react-icons/md";
 import { BiSolidLeaf, BiLeaf } from "react-icons/bi";
 
-const AboutImage = () => {
+const AboutUsSection = () => {
   return (
     <div
-
-      className="min-h-screen bg-cover bg-center bg-no-repeat py-16 "
-
       className="min-h-screen bg-cover bg-center bg-no-repeat py-16"
-
       style={{ backgroundImage: "url(/about-bg.jpg)" }}
     >
       {/* animation styles */}
@@ -79,10 +75,10 @@ const AboutImage = () => {
           }
         }
       `}</style>
-      <div className="w-11/12 mx-auto mt-10">
+      <div className="w-11/12 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[500px] md:min-h-[600px] lg:min-h-[700px]">
           {/* image section */}
-          <div className="relative ">
+          <div className="relative">
             {/* background container */}
             <div className="relative bg-gradient-to-br from-blue-100 to-green-100 rounded-3xl p-8 overflow-hidden">
               {/* main image */}
@@ -122,7 +118,7 @@ const AboutImage = () => {
                 </span>
               </div>
 
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight text-left mb-8">
+              <h1 className="text-3xl md:text-4xl font-semibold text-gray-900 leading-tight text-left mb-8">
                 Environmental Sustainable<br />Forever Green Future
               </h1>
             </div>
@@ -144,7 +140,7 @@ const AboutImage = () => {
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
                     Alternative innovation after ethical to network
-                    environmental<br/> whiteboard transparent growth natural done.
+                    environmental<br /> whiteboard transparent growth natural done.
                   </p>
                 </div>
               </div>
@@ -164,7 +160,7 @@ const AboutImage = () => {
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
                     Alternative innovation after ethical to network
-                    environmental<br/> whiteboard transparent growth natural done.
+                    environmental<br /> whiteboard transparent growth natural done.
                   </p>
                 </div>
               </div>
@@ -189,4 +185,4 @@ const AboutImage = () => {
   );
 };
 
-export default AboutImage;
+export default AboutUsSection;

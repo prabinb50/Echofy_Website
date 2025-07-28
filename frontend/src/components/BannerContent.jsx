@@ -31,7 +31,7 @@ export default function BannerContent() {
 
             {/* section subtitle */}
             <motion.p
-                className='text-lime-500'
+                className='text-lime-500 '
                 initial={{ x: -55, opacity: 0 }}
                 animate={{ x: 0, opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}>

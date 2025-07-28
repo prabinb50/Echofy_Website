@@ -26,22 +26,22 @@ export default function Navbar() {
 
             {/* navigation links */}
             <div className="flex items-center justify-between gap-6 font-semibold">
-                {navLinks.map((link) => (
+                {navLinks.map((eachLink, index) => (
                     <div
-                        key={link.name}
-                        href={link.path}
-                        onClick={() => setActiveLinks(link.name)}
+                        key={index}
+                        // href={eachLink.path}
+                        onClick={() => setActiveLinks(eachLink.name)}
                         className="relative group cursor-pointer"
                     >
                         <a
-                            className={`transition-colors duration-300 ${activeLinks === link.name ? 'text-lime-500' : 'text-white '}`}
+                            className={`transition-colors duration-300 ${activeLinks === eachLink.name ? 'text-lime-500' : 'text-white '}`}
                         >
-                            {link.name}
+                            {eachLink.name}
                         </a>
 
                         {/* underline effect */}
                         <span
-                            className={`absolute bottom-0 left-0 w-full h-[2px] bg-lime-500 transition-all duration-300 ${activeLinks === link.name ? 'scale-x-100' : 'scale-x-0'}`}
+                            className={`absolute bottom-0 left-0 w-full h-[2px] bg-lime-500 transition-all duration-300 ${activeLinks === eachLink.name ? 'scale-x-100' : 'scale-x-0'}`}
                         />
                     </div>
                 ))}

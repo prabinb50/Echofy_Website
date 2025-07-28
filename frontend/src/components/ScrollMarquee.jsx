@@ -1,7 +1,7 @@
 import React from "react";
 import { BiLeaf } from "react-icons/bi";
 
-const Scroll = () => {
+const ScrollMarquee = () => {
   return (
     <div className="bg-[#79B900] h-24 overflow-hidden flex items-center">
       <style>{`
@@ -48,4 +48,4 @@ const Scroll = () => {
   );
 };
 
-export default Scroll;
+export default ScrollMarquee;
