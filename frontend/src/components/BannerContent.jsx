@@ -8,7 +8,7 @@ import { motion } from 'framer-motion'
 export default function BannerContent() {
     return (
         <>
-            {/* vertical social bar with icons and follow us label */}
+            {/* vertical social bar with icons & follow us label */}
             <motion.div
                 className="flex flex-col items-center gap-20 absolute -left-17 top-17 z-20"
                 initial={{ y: 55, opacity: 0 }}
