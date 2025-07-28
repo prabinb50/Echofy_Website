@@ -5,7 +5,7 @@ import { BiSolidLeaf, BiLeaf } from "react-icons/bi";
 const AboutImage = () => {
   return (
     <div
-      className="min-h-screen bg-cover bg-center bg-no-repeat py-16 px-4"
+      className="min-h-screen bg-cover bg-center bg-no-repeat py-16 "
       style={{ backgroundImage: "url(/about-bg.jpg)" }}
     >
       {/* animation styles */}
@@ -78,7 +78,7 @@ const AboutImage = () => {
       <div className="w-11/12 mx-auto mt-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* image section */}
-          <div className="relative ml-12">
+          <div className="relative ">
             {/* background container */}
             <div className="relative bg-gradient-to-br from-blue-100 to-green-100 rounded-3xl p-8 overflow-hidden">
               {/* main image */}
@@ -142,7 +142,7 @@ const AboutImage = () => {
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
                     Alternative innovation after ethical to network
-                    environmental whiteboard transparent growth natural done.
+                    environmental<br/> whiteboard transparent growth natural done.
                   </p>
                 </div>
               </div>
@@ -162,7 +162,7 @@ const AboutImage = () => {
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
                     Alternative innovation after ethical to network
-                    environmental whiteboard transparent growth natural done.
+                    environmental<br/> whiteboard transparent growth natural done.
                   </p>
                 </div>
               </div>
