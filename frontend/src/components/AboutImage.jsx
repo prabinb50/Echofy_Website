@@ -5,7 +5,11 @@ import { BiSolidLeaf, BiLeaf } from "react-icons/bi";
 const AboutImage = () => {
   return (
     <div
+
+      className="min-h-screen bg-cover bg-center bg-no-repeat py-16 "
+
       className="min-h-screen bg-cover bg-center bg-no-repeat py-16"
+
       style={{ backgroundImage: "url(/about-bg.jpg)" }}
     >
       {/* animation styles */}
@@ -76,7 +80,7 @@ const AboutImage = () => {
         }
       `}</style>
       <div className="w-11/12 mx-auto mt-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[500px] md:min-h-[600px] lg:min-h-[700px]">
           {/* image section */}
           <div className="relative ">
             {/* background container */}
@@ -100,28 +104,26 @@ const AboutImage = () => {
           {/* content section */}
           <div className="space-y-8 relative">
             {/* floating leaf - top right */}
-            <BiLeaf className="absolute -top-12 -right-5 w-20 h-30 text-[#79B900] opacity-70 pulse-scale z-0" />
+            <BiLeaf className="hidden md:block absolute -top-12 -right-5 w-20 h-30 text-[#79B900] opacity-70 pulse-scale z-0" />
 
             {/* decorative shape - bottom right */}
             <img
               src="/about-shape.png"
               alt="About shape"
-              className="absolute -bottom-7 right-80 w-20 h-auto opacity-60 horizontal-sway z-0"
+              className="hidden md:block absolute -bottom-7 right-80 w-20 h-auto opacity-60 horizontal-sway z-0"
             />
 
             {/* title section */}
             <div className="space-y-4">
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-2 mb-4">
                 <MdEco className="w-6 h-6 text-[#79B900]" />
-                <span className="text-[#79B900] font-semibold uppercase tracking-wide">
+                <span className="text-[#79B900] font-semibold uppercase tracking-wide text-base md:text-lg lg:text-xl">
                   About Echofy
                 </span>
               </div>
 
-              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-snug">
-                Environmental Sustainable
-                <br />
-                <span className="text-gray-800">Forever Green Future</span>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 leading-tight text-left mb-8">
+                Environmental Sustainable<br />Forever Green Future
               </h1>
             </div>
 
@@ -142,7 +144,7 @@ const AboutImage = () => {
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
                     Alternative innovation after ethical to network
-                    environmental whiteboard transparent growth natural done.
+                    environmental<br/> whiteboard transparent growth natural done.
                   </p>
                 </div>
               </div>
@@ -162,7 +164,7 @@ const AboutImage = () => {
                   </h3>
                   <p className="text-gray-600 leading-relaxed">
                     Alternative innovation after ethical to network
-                    environmental whiteboard transparent growth natural done.
+                    environmental<br/> whiteboard transparent growth natural done.
                   </p>
                 </div>
               </div>
