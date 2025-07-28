@@ -5,7 +5,11 @@ import { BiSolidLeaf, BiLeaf } from "react-icons/bi";
 const AboutImage = () => {
   return (
     <div
+
       className="min-h-screen bg-cover bg-center bg-no-repeat py-16 "
+
+      className="min-h-screen bg-cover bg-center bg-no-repeat py-16"
+
       style={{ backgroundImage: "url(/about-bg.jpg)" }}
     >
       {/* animation styles */}
