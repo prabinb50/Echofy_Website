@@ -16,6 +16,7 @@ export default function BannerImage() {
 
     return (
         <div className='relative w-full h-screen overflow-hidden'>
+            {/* custom styles for pagination bullets */}
             <style>
                 {`
                 .swiper-pagination-bullet {
@@ -24,7 +25,7 @@ export default function BannerImage() {
                     background: transparent !important;
                     border: none;
                     opacity: 1;
-                    margin: 0 6px !important;
+                    margin: 0 2px !important;
                     box-sizing: border-box;
                     transition: all 0.3s;
                     position: relative;
