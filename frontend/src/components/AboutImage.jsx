@@ -75,10 +75,10 @@ const AboutImage = () => {
           }
         }
       `}</style>
-      <div className="w-11/12 mx-auto">
+      <div className="w-11/12 mx-auto mt-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* image section */}
-          <div className="relative">
+          <div className="relative ml-12">
             {/* background container */}
             <div className="relative bg-gradient-to-br from-blue-100 to-green-100 rounded-3xl p-8 overflow-hidden">
               {/* main image */}
