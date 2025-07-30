@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { NavLink } from 'react-router-dom'
 import { IoSearch } from "react-icons/io5";
 
 // navbar links
@@ -12,9 +13,6 @@ const navLinks = [
 ];
 
 export default function Navbar() {
-    // state to manage active links
-    const [activeLinks, setActiveLinks] = useState("Home");
-
     return (
         <div className='w-11/12 mx-auto flex items-center justify-between py-6 text-white'>
             {/* logo */}
@@ -27,22 +25,18 @@ export default function Navbar() {
             {/* navigation links */}
             <div className="flex items-center justify-between gap-6 font-semibold">
                 {navLinks.map((eachLink, index) => (
-                    <div
-                        key={index}
-                        // href={eachLink.path}
-                        onClick={() => setActiveLinks(eachLink.name)}
-                        className="relative group cursor-pointer"
-                    >
-                        <a
-                            className={`transition-colors duration-300 ${activeLinks === eachLink.name ? 'text-lime-500' : 'text-white '}`}
+                    <div key={index} className="relative group cursor-pointer">
+                        <NavLink
+                            to={eachLink.path}
+                            className={({ isActive }) =>
+                                `transition-colors duration-300 ${isActive ? 'text-lime-500' : 'text-white'}`
+                            }
                         >
                             {eachLink.name}
-                        </a>
+                        </NavLink>
 
                         {/* underline effect */}
-                        <span
-                            className={`absolute bottom-0 left-0 w-full h-[2px] bg-lime-500 transition-all duration-300 ${activeLinks === eachLink.name ? 'scale-x-100' : 'scale-x-0'}`}
-                        />
+                        <span className="absolute bottom-0 left-0 w-full h-[2px] bg-lime-500 scale-x-0 group-hover:scale-x-100 transition-all duration-300" />
                     </div>
                 ))}
             </div>
@@ -66,7 +60,6 @@ export default function Navbar() {
                         Get A Quote
                     </p>
                 </div>
-
             </div>
         </div>
     )

@@ -18,7 +18,7 @@ const ScrollMarquee = () => {
           left: 0;
           top: 50%;
           transform: translateY(-50%);
-          animation: marquee 40s linear infinite;
+          animation: marquee 15s linear infinite;
         }
         @keyframes marquee {
           0% {
