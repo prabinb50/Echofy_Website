@@ -5,9 +5,9 @@ import { Check } from 'lucide-react';
 export default function OurSkills() {
     return (
         <div className='mt-5 pt-20 pb-20 bg-[#f5f8ed]'>
-            <div className='w-11/12 mx-auto grid grid-cols-2 gap-4'>
+            <div className='w-11/12 mx-auto grid grid-cols-2 gap-10'>
                 {/* left child section*/}
-                <div className='space-y-4'>
+                <div className='space-y-6'>
                     <div className="flex items-center gap-2">
                         <GiMapleLeaf className="w-6 h-6 text-[#79B900]" />
 
@@ -23,8 +23,8 @@ export default function OurSkills() {
 
                     <p className='opacity-50 leading-relaxed'>Competently cultivate worldwide e-tailers through principle-centered value professionally engineer high-payoff deliverables without exceptional processes.</p>
 
-                    <div className='flex items-center gap-6 mt-5'>
-                        <div className="relative group inline-flex items-center gap-2 py-3 px-4 rounded-md cursor-pointer overflow-hidden bg-white ">
+                    <div className='flex items-center gap-6'>
+                        <div className="relative group inline-flex items-center gap-2 py-4 px-4 rounded-md cursor-pointer overflow-hidden bg-white ">
                             <span className="absolute inset-0 bg-[#79B900] w-0 group-hover:w-full transition-all duration-500 ease-in-out rounded-md z-0 "></span>
 
                             <div className='flex items-center gap-3 relative z-10 transition-all duration-300 group-hover:text-white'>
@@ -32,13 +32,13 @@ export default function OurSkills() {
                                     <Check color="white" />
                                 </div>
 
-                                <p className="font-medium text-xl opacity-80 group-hover:opacity-100">
+                                <p className="text-xl group-hover:opacity-100">
                                     Safe Environment
                                 </p>
                             </div>
                         </div>
 
-                        <div className="relative group inline-flex items-center gap-2 py-3 px-4 rounded-md cursor-pointer overflow-hidden bg-white ">
+                        <div className="relative group inline-flex items-center gap-2 py-4 px-4 rounded-md cursor-pointer overflow-hidden bg-white">
                             <span className="absolute inset-0 bg-[#79B900] w-0 group-hover:w-full transition-all duration-500 ease-in-out rounded-md z-0 "></span>
 
                             <div className='flex items-center gap-3 relative z-10 transition-all duration-300 group-hover:text-white'>
@@ -46,19 +46,50 @@ export default function OurSkills() {
                                     <Check color="white" />
                                 </div>
 
-                                <p className="font-medium text-xl opacity-80 group-hover:opacity-100">
+                                <p className="text-xl group-hover:opacity-100">
                                     Dirty Recycling
                                 </p>
                             </div>
                         </div>
                     </div>
+
+                    <div className='space-y-3'>
+                        <div className='flex items-center justify-between'>
+                            <p className='font-semibold opacity-80'>Recycling</p>
+                            <p className='font-semibold opacity-80'>90%</p>
+                        </div>
+
+                        <div className='w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700'>
+                            <div className='bg-[#79B900] h-2 rounded-full w-5/6'></div>
+                        </div>
+                    </div>
+
+                    <div className='space-y-3'>
+                        <div className='flex items-center justify-between'>
+                            <p className='font-semibold opacity-80'>Ocean Cleaning</p>
+                            <p className='font-semibold opacity-80'>80%</p>
+                        </div>
+
+                        <div className='w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700'>
+                            <div className='bg-[#79B900] h-2 rounded-full w-3/4'></div>
+                        </div>
+                    </div>
                 </div>
 
                 {/* right child section*/}
-                <div className='relative'>
+                <div className='relative z-10'>
                     <img
                         src="/skill-thumb.png"
                         alt="Skill Thumb"
+                        draggable="false"
+                        className='object-cover'
+                    />
+
+                    <img
+                        src="/skill-shape.png"
+                        alt="Skill Shape"
+                        draggable="false"
+                        className='object-cover absolute top-5 left-0 float-animation'
                     />
                 </div>
             </div>

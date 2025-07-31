@@ -84,13 +84,14 @@ const AboutUsSection = () => {
                 <img
                   src="/about.png"
                   alt="Environmental sustainable future"
+                  draggable="false"
                   className="w-full h-auto object-cover"
                 />
               </div>
 
               {/* award badge */}
               <div className="absolute bottom-8 left-3 text-white px-7 py-3 rounded-xl flex items-center space-x-3 z-10 float-animation">
-                <img src="/about-award.png" alt="Award" className="w-68 h-25" />
+                <img src="/about-award.png" alt="Award" className="w-68 h-25" draggable="false"/>
               </div>
           </div>
 
