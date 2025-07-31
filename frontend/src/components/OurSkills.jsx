@@ -1,6 +1,7 @@
 import React from 'react'
 import { GiMapleLeaf } from 'react-icons/gi'
 import { Check } from 'lucide-react';
+import CountUpUsage from './count-up/CountUpUsage';
 
 export default function OurSkills() {
     return (
@@ -81,7 +82,7 @@ export default function OurSkills() {
                     <div className='space-y-3'>
                         <div className='flex items-center justify-between'>
                             <p className='font-semibold opacity-80'>Recycling</p>
-                            <p className='font-semibold opacity-80'>90%</p>
+                            <p className='font-semibold opacity-80'><CountUpUsage />%</p>
                         </div>
 
                         <div className='w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700'>
