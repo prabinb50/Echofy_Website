@@ -4,7 +4,7 @@ import { Check } from 'lucide-react';
 
 export default function OurSkills() {
     return (
-        <div className='mt-5 pt-20 pb-20 bg-[#f5f8ed]'>
+        <div className='pt-20 pb-20 bg-[#f5f8ed]'>
             <div className='w-11/12 mx-auto grid grid-cols-2 gap-10'>
                 {/* left child section*/}
                 <div className='space-y-6'>

@@ -79,20 +79,20 @@ const AboutUsSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-[500px] md:min-h-[600px]">
           {/* image section */}
           <div className="relative">
-              {/* main image */}
-              <div className="mt-5">
-                <img
-                  src="/about.png"
-                  alt="Environmental sustainable future"
-                  draggable="false"
-                  className="w-full h-auto object-cover"
-                />
-              </div>
+            {/* main image */}
+            <div className="mt-5 mb-5">
+              <img
+                src="/about.png"
+                alt="Environmental sustainable future"
+                draggable="false"
+                className="w-full h-auto object-cover"
+              />
+            </div>
 
-              {/* award badge */}
-              <div className="absolute bottom-8 left-3 text-white px-7 py-3 rounded-xl flex items-center space-x-3 z-10 float-animation">
-                <img src="/about-award.png" alt="Award" className="w-68 h-25" draggable="false"/>
-              </div>
+            {/* award badge */}
+            <div className="absolute bottom-8 left-3 text-white px-7 py-3 rounded-xl flex items-center space-x-3 z-10 float-animation">
+              <img src="/about-award.png" alt="Award" className="w-68 h-25" draggable="false" />
+            </div>
           </div>
 
           {/* content section */}
@@ -179,7 +179,7 @@ const AboutUsSection = () => {
 
                 <div className="flex items-center gap-2 relative z-10 transition-all duration-300 text-white group-hover:text-white">
                   <span className="font-semibold">More About</span>
-                  
+
                   <BiSolidLeaf className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300" />
                 </div>
               </div>
