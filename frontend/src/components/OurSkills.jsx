@@ -4,7 +4,32 @@ import { Check } from 'lucide-react';
 
 export default function OurSkills() {
     return (
-        <div className='pt-20 pb-20 bg-[#f5f8ed]'>
+        <div className='mt-5 pt-20 pb-20 bg-[#f5f8ed] relative overflow-hidden z-10'>
+            <style>{`
+                @keyframes dance {
+                    0% {
+                        transform: translateZ(0px);
+                    }
+                    50% {
+                        transform: translate3d(25px, -25px, 0px);
+                    }
+                    100% {
+                        transform: translate3d(0px, -25px, 25px);
+                    }
+                }
+                .animate-dance {
+                    animation: 3s ease 0s infinite alternate none running dance;
+                }
+            `}
+            </style>
+
+            <img
+                src="/skill-main-shape.png"
+                alt="Skill Main Shape"
+                draggable="false"
+                className='absolute -z-10 top-0 left-0 object-cover w-50 opacity-70 animate-dance'
+            />
+
             <div className='w-11/12 mx-auto grid grid-cols-2 gap-10'>
                 {/* left child section*/}
                 <div className='space-y-6'>
