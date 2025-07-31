@@ -6,7 +6,7 @@ export default function OurSkills() {
     return (
         <div className='mt-5 pt-20 pb-20 bg-[#f5f8ed]'>
             <div className='w-11/12 mx-auto grid grid-cols-2 gap-4'>
-                {/* left child  section*/}
+                {/* left child section*/}
                 <div className='space-y-4'>
                     <div className="flex items-center gap-2">
                         <GiMapleLeaf className="w-6 h-6 text-[#79B900]" />
