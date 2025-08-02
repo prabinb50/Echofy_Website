@@ -6,7 +6,7 @@ import CountUpUsage from './count-up/CountUpUsage';
 export default function OurSkills() {
     return (
         <div className='mt-5 pt-20 pb-20 bg-[#f5f8ed] relative overflow-hidden z-10'>
-            {/* inline style for custom dance animation */}
+            {/* inline style for custom animation */}
             <style>{`
                 @keyframes dance {
                     0% {
