@@ -118,7 +118,7 @@ const AboutUsSection = () => {
                 </span>
               </div>
 
-              <h1 className="text-3xl md:text-4xl font-bold text-gray-900 leading-tight text-left mb-8">
+              <h1 className="text-3xl md:text-4xl font-bold opacity-85 leading-tight text-left mb-8">
                 Environmental Sustainable<br />Forever Green Future
               </h1>
             </div>
@@ -136,7 +136,7 @@ const AboutUsSection = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold opacity-85 mb-2">
                     Economic Benefits
                   </h3>
 
@@ -158,7 +158,7 @@ const AboutUsSection = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold opacity-85 mb-2">
                     Safe Environment
                   </h3>
 

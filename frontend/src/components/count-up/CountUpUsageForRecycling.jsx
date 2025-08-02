@@ -1,7 +1,7 @@
 import React from 'react'
 import CountUp from './CountUp'
 
-export default function CountUpUsage() {
+export default function CountUpUsageForRecycling() {
     return (
         <>
             <CountUp

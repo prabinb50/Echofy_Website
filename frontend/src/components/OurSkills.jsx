@@ -1,11 +1,12 @@
 import React from 'react'
 import { GiMapleLeaf } from 'react-icons/gi'
 import { Check } from 'lucide-react';
-import CountUpUsage from './count-up/CountUpUsage';
+import CountUpUsageForRecycling from './count-up/CountUpUsageForRecycling';
+import CountUpUsageForOceanCleaning from './count-up/CountUpUsageForOceanCleaning';
 
 export default function OurSkills() {
     return (
-        <div className='mt-5 pt-20 pb-20 bg-[#f5f8ed] relative overflow-hidden z-10'>
+        <div className='pt-20 pb-20 bg-[#f5f8ed] relative overflow-hidden z-10'>
             {/* inline style for custom animation */}
             <style>{`
                 @keyframes dance {
@@ -98,7 +99,7 @@ export default function OurSkills() {
                         {/* title and percentage */}
                         <div className='flex items-center justify-between'>
                             <p className='font-semibold opacity-80'>Recycling</p>
-                            <p className='font-semibold opacity-80'><CountUpUsage />%</p>
+                            <p className='font-semibold opacity-80'><CountUpUsageForRecycling />%</p>
                         </div>
 
                         {/* progress bar */}
@@ -112,7 +113,7 @@ export default function OurSkills() {
                         {/* title and percentage */}
                         <div className='flex items-center justify-between'>
                             <p className='font-semibold opacity-80'>Ocean Cleaning</p>
-                            <p className='font-semibold opacity-80'>80%</p>
+                            <p className='font-semibold opacity-80'><CountUpUsageForOceanCleaning />%</p>
                         </div>
 
                         {/* progress bar */}
