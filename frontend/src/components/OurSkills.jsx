@@ -49,9 +49,9 @@ export default function OurSkills() {
                     </div>
 
                     {/* heading texts */}
-                    <div>
-                        <h1 className='font-bold text-4xl leading-tight'>Getting A Greener Future</h1>
-                        <h1 className='font-bold text-4xl leading-tight'>Safe Environment</h1>
+                    <div className='opacity-85 font-bold text-4xl leading-tight'>
+                        <h1>Getting A Greener Future</h1>
+                        <h1>Safe Environment</h1>
                     </div>
 
                     {/* description paragraph */}
