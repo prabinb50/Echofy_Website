@@ -103,6 +103,8 @@ const FeatureSection = () => {
                           alt={feature.title}
                           className="w-full h-full object-cover transition-all duration-700"
                         />
+                        {/* animation of curtain effect only on image */}
+                        <div className="absolute top-0 left-1/2 w-0 h-full bg-[#79B900] transition-all duration-500 z-10 group-hover:w-full group-hover:left-0 group-hover:opacity-0"></div>
                       </div>
                     </div>
 
@@ -126,7 +128,7 @@ const FeatureSection = () => {
                         {feature.desc}
                       </p>
 
-                      {/* Service shape decoration sliding in from bottom */}
+                      {/*service shape decoration sliding in from bottom */}
                       <div className="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-700 delay-500 z-10">
                         <div className="w-20 h-20">
                           <img
