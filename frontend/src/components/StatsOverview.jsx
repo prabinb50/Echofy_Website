@@ -34,7 +34,7 @@ export default function StatsOverview() {
                 src="/counter-bg.png"
                 alt="Counter Background"
                 draggable="false"
-                className='w-full h-100 object-cover'
+                className='w-full h-90 object-cover'
             />
 
             <div className='absolute top-0 left-0 flex items-center justify-center gap-25 w-full h-full'>
