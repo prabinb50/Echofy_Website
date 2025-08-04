@@ -6,7 +6,7 @@ import BlogOne from './BlogOne'
 export default function LatestBlogs() {
     return (
         <div className='pt-20 pb-20'>
-            <div className='w-11/12 mx-auto space-y-10'>
+            <div className='w-11/12 mx-auto space-y-15'>
                 {/* first child */}
                 <div className='space-y-6'>
                     {/* icon and label */}

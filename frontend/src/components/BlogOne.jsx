@@ -5,8 +5,8 @@ import { IoArrowForwardCircle } from 'react-icons/io5'
 const latestBlogData = [
     {
         title: "Top 10 Recycling Tips for Environment",
-        authorInitial: "J",
-        authorName: "John D. Alexon",
+        authorInitial: "H",
+        authorName: "Henry Smith",
         imageUrl: "/blog-thumb1.jpg"
     },
     {
@@ -25,17 +25,28 @@ const latestBlogData = [
 
 export default function BlogOne() {
     return (
-        <div className='grid grid-cols-3 gap-5'>
+        <div className='grid grid-cols-3 gap-5 bg-white rounded-md overflow-hidden'>
             {
                 latestBlogData.map((blog, index) => (
-                    <div key={index} className='border border-gray-300 rounded-b-lg overflow-hidden space-y-5 shadow-lg hover:shadow-xl transition-shadow duration-300'>
-                        {/* image */}
-                        <img
-                            src={blog.imageUrl}
-                            alt="Blog Thumbnail"
-                            className="w-full object-cover"
-                            draggable="false"
-                        />
+                    // blog card
+                    <div key={index} className='border border-gray-300 rounded-lg space-y-5 relative overflow-hidden group hover:shadow-xl transition-shadow duration-300'>
+                        {/* image container */}
+                        <div className="relative overflow-hidden">
+                            {/* green overlay animation - only covers image */}
+                            <div className="absolute top-0 left-1/2 w-0 h-full bg-[#79B900] transition-all duration-500 z-10 group-hover:w-full group-hover:left-0 group-hover:opacity-0"></div>
+
+                            {/* image */}
+                            <img
+                                src={blog.imageUrl}
+                                alt="Blog Thumbnail"
+                                className="w-full object-cover transition-all duration-500 scale-100 group-hover:scale-110"
+                                draggable="false"
+                            />
+
+                            <div className='absolute -left-full transform transition-all duration-500 group-hover:left-5 top-5 z-20'>
+                                <h6 className='text-white text-center inline-block overflow-hidden rounded-full px-5 py-2 transition-all duration-300 bg-[#79B900]'>Environment</h6>
+                            </div>
+                        </div>
 
                         {/* content section */}
                         <div className='px-5 space-y-3'>
@@ -46,7 +57,7 @@ export default function BlogOne() {
                             </div>
 
                             {/* blog title */}
-                            <h2 className='font-semibold opacity-85 text-2xl hover:text-[#79B900] cursor-pointer'>{blog.title}</h2>
+                            <h2 className='font-semibold opacity-85 text-2xl hover:text-[#79B900] cursor-pointer group-hover:text-[#79B900]'>{blog.title}</h2>
 
                             {/* blog description */}
                             <p className='opacity-50 leading-relaxed'>Competently cultivate worldwide to e-tailers professionally engineer high</p>
@@ -60,7 +71,7 @@ export default function BlogOne() {
                             {/* author initials and name */}
                             <div className='flex items-center justify-between gap-3 hover:text-[#79B900] cursor-pointer'>
                                 {/* author initials */}
-                                <div className='rounded-full bg-[#79B900] text-white px-4 py-2'>
+                                <div className='rounded-full bg-[#79B900] text-white px-3.5 py-2'>
                                     <span className='font-semibold'>{blog.authorInitial}</span>
                                 </div>
 
@@ -77,4 +88,3 @@ export default function BlogOne() {
         </div>
     )
 }
-
