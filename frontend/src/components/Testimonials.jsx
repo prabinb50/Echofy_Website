@@ -51,7 +51,6 @@ export default function Testimonials() {
                 {/* second child */}
                 <Reviews />
             </div>
-
         </div>
     )
 }
