@@ -36,7 +36,7 @@ export default function OurSkills() {
 
             <div className='w-11/12 mx-auto grid grid-cols-2 gap-10'>
                 {/* left child section */}
-                <div className='space-y-6'>
+                <div className='space-y-5'>
                     {/* icon and label section */}
                     <div className="flex items-center gap-2">
                         {/* leaf icon */}

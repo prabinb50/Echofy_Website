@@ -29,7 +29,7 @@ export default function Testimonials() {
 
             <div className='w-11/12 mx-auto space-y-15'>
                 {/* first child */}
-                <div className='space-y-6'>
+                <div className='space-y-5'>
                     {/* icon and label */}
                     <div className="flex items-center justify-center gap-2">
                         {/* leaf icon */}

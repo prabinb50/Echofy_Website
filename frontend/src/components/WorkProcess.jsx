@@ -30,22 +30,24 @@ const processSteps = [
 const WorkProcess = () => {
   return (
     <section className="w-full bg-white py-20">
-      <div className="w-11/12 mx-auto">
+      <div className="w-11/12 mx-auto space-y-15">
         {/* header */}
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-2 mb-4">
-            <GiMapleLeaf className="w-4 h-4 text-lime-500" />
-            <span className="text-lime-600 font-semibold uppercase tracking-wide text-sm">
+        <div className="text-center space-y-5">
+          <div className="flex items-center justify-center gap-2">
+            <GiMapleLeaf className="w-6 h-6 text-[#79B900]" />
+
+            <span className="text-[#79B900] font-medium">
               WORKING PROCESS
             </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+
+          <h1 className="opacity-85 font-bold text-4xl leading-tight">
             Process To Safe Environment
-          </h2>
+          </h1>
         </div>
 
         {/* process Steps */}
-        <div className="flex items-center justify-between max-w-6xl mx-auto">
+        <div className="flex items-center justify-between max-w-6xl mx-auto ">
           {processSteps.map((step, index) => (
             <div key={step.id} className="flex items-center">
               <div className="flex flex-col items-center text-center">
@@ -61,15 +63,15 @@ const WorkProcess = () => {
                 </div>
 
                 <div className="max-w-xs">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-lg font-bold opacity-85 mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="opacity-50 leading-relaxed text-sm">
                     {step.desc}
                   </p>
                 </div>
               </div>
-              
+
               {index < processSteps.length - 1 && (
                 <div className="mx-8 mb-16">
                   <img
