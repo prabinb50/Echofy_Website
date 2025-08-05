@@ -5,7 +5,13 @@ import AboutUsSection from './components/AboutUsSection'
 import ScrollMarquee from './components/ScrollMarquee'
 import OurSkills from './components/OurSkills'
 import FeatureSection from './components/FeatureSection'
+
 import WorkProcess from './components/WorkProcess'
+
+import StatsOverview from './components/StatsOverview'
+import LatestBlogs from './components/LatestBlogs'
+import Testimonials from './components/Testimonials'
+
 
 export default function App() {
   return (
@@ -13,10 +19,16 @@ export default function App() {
       <BannerImage />
       <ScrollMarquee />
       <AboutUsSection />
-      <FeatureSection/>
+      <FeatureSection />
       <OurSkills />
+
       <WorkProcess/>
       
+
+      <StatsOverview />
+      <LatestBlogs />
+      <Testimonials />
+
     </div>
   )
 }

@@ -1,11 +1,13 @@
 import React from 'react'
 import { GiMapleLeaf } from 'react-icons/gi'
 import { Check } from 'lucide-react';
-import CountUpUsage from './count-up/CountUpUsage';
+import CountUpUsageForRecycling from './count-up/CountUpUsageForRecycling';
+import CountUpUsageForOceanCleaning from './count-up/CountUpUsageForOceanCleaning';
 
 export default function OurSkills() {
     return (
-        <div className='mt-5 pt-20 pb-20 bg-[#f5f8ed] relative overflow-hidden z-10'>
+        <div className='pt-20 pb-20 bg-[#f5f8ed] relative overflow-hidden z-10'>
+            {/* inline style for custom animation */}
             <style>{`
                 @keyframes dance {
                     0% {
@@ -24,6 +26,7 @@ export default function OurSkills() {
             `}
             </style>
 
+            {/* animated background shape image */}
             <img
                 src="/skill-main-shape.png"
                 alt="Skill Main Shape"
@@ -32,27 +35,36 @@ export default function OurSkills() {
             />
 
             <div className='w-11/12 mx-auto grid grid-cols-2 gap-10'>
-                {/* left child section*/}
+                {/* left child section */}
                 <div className='space-y-6'>
+                    {/* icon and label section */}
                     <div className="flex items-center gap-2">
+                        {/* leaf icon */}
                         <GiMapleLeaf className="w-6 h-6 text-[#79B900]" />
 
+                        {/* label text */}
                         <span className="text-[#79B900] font-medium">
                             OUR SKILLS
                         </span>
                     </div>
 
-                    <div>
-                        <h1 className='font-bold text-4xl leading-tight'>Getting A Greener Future</h1>
-                        <h1 className='font-bold text-4xl leading-tight'>Safe Environment</h1>
+                    {/* heading texts */}
+                    <div className='opacity-85 font-bold text-4xl leading-tight'>
+                        <h1>Getting A Greener Future</h1>
+                        <h1>Safe Environment</h1>
                     </div>
 
+                    {/* description paragraph */}
                     <p className='opacity-50 leading-relaxed'>Competently cultivate worldwide e-tailers through principle-centered value professionally engineer high-payoff deliverables without exceptional processes.</p>
 
+                    {/* feature lists */}
                     <div className='flex items-center gap-6'>
-                        <div className="relative group inline-flex items-center gap-2 py-4 px-4 rounded-md cursor-pointer overflow-hidden bg-white ">
+                        {/* first feature  */}
+                        <div className="relative group inline-flex items-center gap-2 py-4 px-4 rounded-md cursor-pointer overflow-hidden bg-white">
+                            {/* hover background */}
                             <span className="absolute inset-0 bg-[#79B900] w-0 group-hover:w-full transition-all duration-500 ease-in-out rounded-md z-0 "></span>
 
+                            {/* inner content */}
                             <div className='flex items-center gap-3 relative z-10 transition-all duration-300 group-hover:text-white'>
                                 <div className='rounded-full bg-[#355250] px-2 py-2 relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#355250] before:opacity-50 before:-z-10 before:rounded-full before:animate-ping cursor-pointer'>
                                     <Check color="white" />
@@ -64,9 +76,12 @@ export default function OurSkills() {
                             </div>
                         </div>
 
+                        {/* second feature */}
                         <div className="relative group inline-flex items-center gap-2 py-4 px-4 rounded-md cursor-pointer overflow-hidden bg-white">
+                            {/* hover background */}
                             <span className="absolute inset-0 bg-[#79B900] w-0 group-hover:w-full transition-all duration-500 ease-in-out rounded-md z-0 "></span>
 
+                            {/* inner content */}
                             <div className='flex items-center gap-3 relative z-10 transition-all duration-300 group-hover:text-white'>
                                 <div className='rounded-full bg-[#355250] px-2 py-2 relative z-10 before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[#355250] before:opacity-50 before:-z-10 before:rounded-full before:animate-ping cursor-pointer'>
                                     <Check color="white" />
@@ -79,23 +94,29 @@ export default function OurSkills() {
                         </div>
                     </div>
 
+                    {/* recycling progress bar */}
                     <div className='space-y-3'>
+                        {/* title and percentage */}
                         <div className='flex items-center justify-between'>
                             <p className='font-semibold opacity-80'>Recycling</p>
-                            <p className='font-semibold opacity-80'><CountUpUsage />%</p>
+                            <p className='font-semibold opacity-80'><CountUpUsageForRecycling />%</p>
                         </div>
 
+                        {/* progress bar */}
                         <div className='w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700'>
                             <div className='bg-[#79B900] h-2 rounded-full w-5/6'></div>
                         </div>
                     </div>
 
+                    {/* ocean cleaning progress bar */}
                     <div className='space-y-3'>
+                        {/* title and percentage */}
                         <div className='flex items-center justify-between'>
                             <p className='font-semibold opacity-80'>Ocean Cleaning</p>
-                            <p className='font-semibold opacity-80'>80%</p>
+                            <p className='font-semibold opacity-80'><CountUpUsageForOceanCleaning />%</p>
                         </div>
 
+                        {/* progress bar */}
                         <div className='w-full bg-gray-200 rounded-full h-2 dark:bg-gray-700'>
                             <div className='bg-[#79B900] h-2 rounded-full w-3/4'></div>
                         </div>
@@ -104,6 +125,7 @@ export default function OurSkills() {
 
                 {/* right child section*/}
                 <div className='relative z-10'>
+                    {/* main image */}
                     <img
                         src="/skill-thumb.png"
                         alt="Skill Thumb"
@@ -111,6 +133,7 @@ export default function OurSkills() {
                         className='object-cover'
                     />
 
+                    {/* floating shape image */}
                     <img
                         src="/skill-shape.png"
                         alt="Skill Shape"
