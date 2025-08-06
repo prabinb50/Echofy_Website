@@ -46,37 +46,61 @@ const WorkProcess = () => {
         </div>
 
         {/* process Steps */}
-        <div className="flex items-center justify-between max-w-6xl mx-auto ">
+        <div className="flex items-center justify-between max-w-6xl mx-auto">
           {processSteps.map((step, index) => (
             <div key={step.id} className="flex items-center">
+              {/* step Circle */}
               <div className="flex flex-col items-center text-center">
-                <div className="relative mb-6">
-                  <div className="w-32 h-32 bg-lime-50 rounded-full flex items-center justify-center relative">
-                    <img
-                      src={step.processIcon}
-                      alt={`Process ${step.id}`}
-                      className="w-20 h-24 object-contain"
-                    />
+                {/* spinning Dashed Circle */}
+                <div className="relative mb-6 overflow-visible">
+                  {/* inner Circle with Icon (static) */}
+                  <div className="w-32 h-32 bg-lime-50 rounded-full relative mx-auto overflow-visible">
+                    {step.processIcon ? (
+                      <img
+                        src={step.processIcon}
+                        alt="Process Icon"
+                        className="absolute w-36 h-55 object-contain z-20  "
+                        style={{
+                          maxWidth: "none",
+                          maxHeight: "none",
+                          top: "-55px",
+                          left: "50%",
+                          transform: "translateX(-50%)",
+                        }}
+                      />
+                    ) : (
+                      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-lime-600">
+                        {step.icon}
+                      </div>
+                    )}
                   </div>
 
-                  <div className="absolute inset-0 w-40 h-40 rounded-full border-2 border-dashed border-lime-400 animate-spin -top-4 -left-4"></div>
+                  {/* spinning Dashed Circle Overlay - Larger with space */}
+                  <div
+                    className="absolute inset-0 w-40 h-40 rounded-full border-2 border-dashed border-lime-400 animate-spin top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                    style={{ animationDuration: "8s" }}
+                  ></div>
                 </div>
 
+                {/* content */}
                 <div className="max-w-xs">
-                  <h3 className="text-lg font-bold opacity-85 mb-3">
+                  <h3 className="text-xl font-bold opacity-85 mb-3">
                     {step.title}
                   </h3>
 
-                  <p className="opacity-50 leading-relaxed text-sm">
+                  <p className="text-gray-600 text-sm leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
               </div>
 
+              {/* arrow */}
               {index < processSteps.length - 1 && (
                 <div className="mx-8 mb-16">
                   <img
-                    src={index === 0 ? "/process-arrow.png" : "/process-arrow2.png"}
+                    src={
+                      index === 0 ? "/process-arrow.png" : "/process-arrow2.png"
+                    }
                     alt="Arrow"
                     className="w-40 h-8 mb-10"
                   />
