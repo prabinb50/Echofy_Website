@@ -1,5 +1,4 @@
 "use client";
-
 import { Globe, Recycle, TreePine } from "lucide-react";
 import { GiMapleLeaf } from "react-icons/gi";
 
@@ -59,6 +58,7 @@ const WorkProcess = () => {
                       className="w-20 h-24 object-contain"
                     />
                   </div>
+
                   <div className="absolute inset-0 w-40 h-40 rounded-full border-2 border-dashed border-lime-400 animate-spin -top-4 -left-4"></div>
                 </div>
 
@@ -66,6 +66,7 @@ const WorkProcess = () => {
                   <h3 className="text-lg font-bold opacity-85 mb-3">
                     {step.title}
                   </h3>
+
                   <p className="opacity-50 leading-relaxed text-sm">
                     {step.desc}
                   </p>
