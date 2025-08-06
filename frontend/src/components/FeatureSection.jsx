@@ -96,7 +96,7 @@ const FeatureSection = () => {
         <div className="relative overflow-hidden">
           <div
             className="flex transition-transform duration-700"
-            style={{ transform: `translateX(-${currentIndex * 33.333}%)` }}
+            style={{ transform: `translateX(-${ currentIndex * 33.333}%)` }}
           >
             {/* render cards in loop */}
             {[...allFeatures, ...allFeatures, ...allFeatures].map(
@@ -118,7 +118,7 @@ const FeatureSection = () => {
                     </div>
 
                     {/* content section */}
-                    <div className="p-6 group-hover:text-white">
+                    <div className="p-6 group-hover:text-white relative">
                       <div className="flex items-center justify-between mb-4">
                         <div className="bg-lime-50 group-hover:bg-black rounded-full p-3">
                           <div className="group-hover:text-lime-600">
@@ -140,7 +140,18 @@ const FeatureSection = () => {
                       <p className="leading-relaxed opacity-50 group-hover:text-gray-300">
                         {feature.desc}
                       </p>
-                      
+
+                      {/* service shape decoration sliding in from bottom */}
+                      <div className="absolute bottom-0 right-0 opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-700 delay-100">
+                        <div className="w-20 h-20">
+                          <img
+                            src="/service-shape.png"
+                            alt="Service Shape"
+                            className="w-full h-full object-contain rotate-180 scale-x-[-1]"
+                          />
+                        </div>
+                      </div>
+
                     </div>
                   </div>
                 </div>
