@@ -9,6 +9,7 @@ import WorkProcess from './components/WorkProcess'
 import StatsOverview from './components/StatsOverview'
 import LatestBlogs from './components/LatestBlogs'
 import Testimonials from './components/Testimonials'
+import Partners from './components/Partners'
 import Footer from './components/Footer'
 
 export default function App() {
@@ -19,10 +20,11 @@ export default function App() {
       <AboutUsSection />
       <FeatureSection />
       <OurSkills />
-      <WorkProcess />
       <StatsOverview />
-      <LatestBlogs />
+      <WorkProcess />
       <Testimonials />
+      <Partners />
+      <LatestBlogs />
       <Footer/>
     </div>
   )

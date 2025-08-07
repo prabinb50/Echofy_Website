@@ -1,10 +1,11 @@
 import React from 'react'
-import { GiFallingLeaf, GiMapleLeaf } from 'react-icons/gi'
+import { GiLeafSkeleton, GiMapleLeaf } from 'react-icons/gi'
 import Reviews from './Reviews'
 
 export default function Testimonials() {
     return (
         <div className='bg-[#f5f8ed] relative z-10 pt-20 pb-20'>
+            {/* custom animations for leaf icons */}
             <style>
                 {`
                     @keyframes scalePulse {
@@ -22,10 +23,26 @@ export default function Testimonials() {
                     `}
             </style>
 
-            {/* <GiFallingLeaf
-                size={30}
-                className="scale-pulse text-[#79B900] absolute"
-            /> */}
+            {/* animated leaf icons */}
+            <GiLeafSkeleton
+                size={23}
+                className="scale-pulse text-[#79B900] absolute right-[18rem] top-15"
+            />
+
+            <GiLeafSkeleton
+                size={50}
+                className="scale-pulse text-[#79B900] absolute right-35 top-42"
+            />
+
+            <GiLeafSkeleton
+                size={23}
+                className="scale-pulse text-[#79B900] absolute left-[18rem] top-15 rotate-90"
+            />
+
+            <GiLeafSkeleton
+                size={50}
+                className="scale-pulse text-[#79B900] absolute left-35 top-42 rotate-90"
+            />
 
             <div className='w-11/12 mx-auto space-y-15'>
                 {/* first child */}
