@@ -10,6 +10,7 @@ import StatsOverview from './components/StatsOverview'
 import LatestBlogs from './components/LatestBlogs'
 import Testimonials from './components/Testimonials'
 import Partners from './components/Partners'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
       <Testimonials />
       <Partners />
       <LatestBlogs />
+      <Footer/>
     </div>
   )
 }
