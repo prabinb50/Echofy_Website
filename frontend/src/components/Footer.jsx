@@ -95,11 +95,18 @@ const Footer = () => {
           {/* column 1 - logo & contact */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-lime-500 rounded-full flex items-center justify-center">
+              {/* <div className="w-10 h-10 bg-lime-500 rounded-full flex items-center justify-center">
                 <span className="text-white font-bold text-lg text-center">e</span>
               </div>
 
-              <h3 className="text-3xl font-bold text-white">Echofy</h3>
+              <h3 className="text-3xl font-bold text-white">Echofy</h3> */}
+
+              <img
+                src="/logo.png"
+                alt="Echofy Logo"
+                className="object-cover"
+                draggable="false"
+              />
             </div>
 
             <p className="text-gray-300 leading-relaxed">
@@ -107,7 +114,7 @@ const Footer = () => {
             </p>
 
             <div className="border-t border-gray-600 pt-4 mt-6">
-              <h4 className="text-white font-semibold mb-3">Contact</h4>
+              <h4 className="text-white font-semibold mb-3 text-xl">Contact</h4>
               <div className="space-y-2">
                 <div className="flex items-center gap-2">
                   <span className="text-lime-400">📞</span>
