@@ -46,9 +46,9 @@ const WorkProcess = () => {
         </div>
 
         {/* process Steps */}
-        <div className="flex items-center justify-between max-w-6xl mx-auto">
+        <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between max-w-6xl mx-auto gap-16 lg:gap-0">
           {processSteps.map((step, index) => (
-            <div key={step.id} className="flex items-center">
+            <div key={step.id} className="flex flex-col lg:flex-row items-center">
               {/* step Circle */}
               <div className="flex flex-col items-center text-center">
                 {/* spinning Dashed Circle */}
@@ -94,15 +94,13 @@ const WorkProcess = () => {
                 </div>
               </div>
 
-              {/* arrow */}
+              {/* arrow (desktop only) */}
               {index < processSteps.length - 1 && (
-                <div className="mx-8 mb-16">
+                <div className="hidden lg:block mx-8 mb-16">
                   <img
-                    src={
-                      index === 0 ? "/process-arrow.png" : "/process-arrow2.png"
-                    }
+                    src={index === 0 ? "/process-arrow.png" : "/process-arrow2.png"}
                     alt="Arrow"
-                    className="w-40 h-8 mb-10"
+                    className="w-40 h-8 mb-10 object-contain"
                   />
                 </div>
               )}
