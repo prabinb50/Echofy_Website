@@ -1,8 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion, useAnimationControls } from "framer-motion";
 import { Star } from "lucide-react";
 
 export default function Reviews({ testimonials = [] }) {
+    // responsive state to track window size
+    const [isMobile, setIsMobile] = useState(false);
+    const [isTablet, setIsTablet] = useState(false);
+
+    // default testimonials data 
     const defaultTestimonials = [
         {
             name: "Anjelina Watson",
@@ -31,41 +36,65 @@ export default function Reviews({ testimonials = [] }) {
         }
     ];
 
+    // use provided testimonials or fall back to defaults
     const testimonialsToUse = testimonials.length > 0 ? testimonials : defaultTestimonials;
 
+    // animation controls for the sliding motion
     const controls = useAnimationControls();
 
-    // set animation based on screen size
+    // track screen size and update animation settings accordingly
     useEffect(() => {
-        const isMobile = window.innerWidth < 768;
-        controls.start({
-            x: ["0%", "-100%"],
-            transition: {
-                x: {
-                    repeat: Infinity,
-                    repeatType: "loop",
-                    duration: isMobile ? 10 : 20,
-                    ease: "linear"
-                }
-            }
-        });
-    }, [controls]);
+        // initial check for screen size
+        const handleResize = () => {
+            setIsMobile(window.innerWidth < 640);
+            setIsTablet(window.innerWidth >= 640 && window.innerWidth < 1024);
+        };
 
-    // review card ui 
+        // set initial values
+        handleResize();
+
+        // add event listener
+        window.addEventListener('resize', handleResize);
+
+        // apply animation based on current screen size
+        const startAnimation = () => {
+            controls.start({
+                x: ["0%", "-100%"],
+                transition: {
+                    x: {
+                        repeat: Infinity,
+                        repeatType: "loop",
+                        duration: isMobile ? 8 : isTablet ? 15 : 20,
+                        ease: "linear"
+                    }
+                }
+            });
+        };
+
+        startAnimation();
+
+        // cleanup function
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [controls, isMobile, isTablet]);
+
+    // review card component
     const TestimonialCard = ({ testimonial, index }) => {
-        const rating = 3 + (index % 3); // simulate varying rating between 3 and 5
+        // use provided rating or calculate based on index
+        const rating = testimonial.rating || 3 + (index % 3); // simulate varying rating between 3 and 5
 
         return (
             <motion.div
-                className="min-w-[300px] md:min-w-[350px] p-5 bg-white rounded-xl mx-4 shadow-sm hover:shadow-md transition-shadow"
+                className="min-w-[300px] md:min-w-[350px] p-4 sm:p-5 bg-white rounded-xl mx-2 sm:mx-4 shadow-sm hover:shadow-md transition-shadow"
                 whileHover={{ scale: 1.02 }}
             >
-                {/* profile section */}
+                {/* profile section - author info and rating */}
                 <div className="flex items-center gap-3">
                     <img
                         src={testimonial.profilePicture}
                         alt={`Profile picture of ${testimonial.name}`}
-                        className="w-[60px] h-[60px] rounded-full object-cover"
+                        className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] rounded-full object-cover"
                         onError={(e) => {
                             e.target.src = "https://via.placeholder.com/60";
                         }}
@@ -73,13 +102,14 @@ export default function Reviews({ testimonials = [] }) {
                     />
 
                     <div>
-                        <h3 className="font-semibold text-gray-800">{testimonial.name}</h3>
+                        <h3 className="font-semibold text-gray-800 text-sm sm:text-base md:text-lg">{testimonial.name}</h3>
 
+                        {/* star rating display */}
                         <div className="flex gap-0.5 mt-1">
                             {Array.from({ length: 5 }).map((_, i) => (
                                 <Star
                                     key={i}
-                                    className={`w-4 h-4 ${i < rating
+                                    className={`w-3 h-3 sm:w-4 sm:h-4 ${i < rating
                                         ? "text-yellow-400 fill-yellow-400"
                                         : "text-gray-400"
                                         }`}
@@ -90,36 +120,37 @@ export default function Reviews({ testimonials = [] }) {
                 </div>
 
                 {/* testimonial text */}
-                <p className="text-gray-600 leading-relaxed mt-5">
+                <p className="text-gray-600 leading-relaxed mt-4 text-sm md:text-base">
                     Appropriately administrate proactive value with niche markets. Dramatically target market position ideas after high quality best practices.
                 </p>
             </motion.div>
         );
     };
 
-    // main return
     return (
         <div className="w-full overflow-hidden py-1">
-            <div className="max-w-7xl mx-auto px-4">
+            <div className="max-w-7xl mx-auto px-2 sm:px-4">
+                {/* scrolling container with hover pause functionality */}
                 <motion.div
                     className="flex"
                     animate={controls}
                     onHoverStart={() => controls.stop()}
                     onHoverEnd={() => {
-                        const isMobile = window.innerWidth < 768;
+                        // restart animation with appropriate speed when hover ends
                         controls.start({
                             x: ["0%", "-100%"],
                             transition: {
                                 x: {
                                     repeat: Infinity,
                                     repeatType: "loop",
-                                    duration: isMobile ? 10 : 20,
+                                    duration: isMobile ? 8 : isTablet ? 15 : 20,
                                     ease: "linear"
                                 }
                             }
                         });
                     }}
                 >
+                    {/* duplicate testimonials to create seamless loop */}
                     {[...testimonialsToUse, ...testimonialsToUse].map((testimonial, index) => (
                         <TestimonialCard key={index} testimonial={testimonial} index={index} />
                     ))}
@@ -128,4 +159,3 @@ export default function Reviews({ testimonials = [] }) {
         </div>
     );
 };
-
