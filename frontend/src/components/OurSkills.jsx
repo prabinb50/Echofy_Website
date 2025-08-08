@@ -3,6 +3,7 @@ import { GiMapleLeaf } from 'react-icons/gi'
 import { Check } from 'lucide-react';
 import CountUpUsageForRecycling from './count-up/CountUpUsageForRecycling';
 import CountUpUsageForOceanCleaning from './count-up/CountUpUsageForOceanCleaning';
+import { motion } from "framer-motion";
 
 export default function OurSkills() {
     return (
@@ -134,11 +135,13 @@ export default function OurSkills() {
                     />
 
                     {/* floating shape image */}
-                    <img
+                    <motion.img
                         src="/skill-shape.png"
                         alt="Skill Shape"
                         draggable="false"
-                        className='object-cover absolute top-5 left-0 float-animation'
+                        className="object-cover absolute top-5 left-0"
+                        animate={{ y: [0, -20, 0] }}
+                        transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                     />
                 </div>
             </div>

@@ -15,17 +15,17 @@ import Footer from './components/Footer'
 export default function App() {
   return (
     <div>
-      <BannerImage />
+      {/* <BannerImage />
       <ScrollMarquee />
       <AboutUsSection />
-      <FeatureSection />
+      <FeatureSection /> */}
       <OurSkills />
       <StatsOverview />
-      <WorkProcess />
-      <Testimonials />
-      <Partners />
-      <LatestBlogs />
-      <Footer/>
+      {/* <WorkProcess /> */}
+      {/* <Testimonials /> */}
+      {/* <Partners /> */}
+      {/* <LatestBlogs /> */}
+      {/* <Footer /> */}
     </div>
   )
 }
