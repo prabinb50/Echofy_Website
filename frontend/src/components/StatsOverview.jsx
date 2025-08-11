@@ -35,7 +35,7 @@ export default function StatsOverview() {
                 src="/counter-bg.png"
                 alt="Counter Background"
                 draggable="false"
-                className='w-full h-[450px] md:h-[400px] lg:h-[500px] object-cover'
+                className='w-full h-[450px] md:h-[400px] object-cover'
             />
 
             {/* overlay container for stats */}
