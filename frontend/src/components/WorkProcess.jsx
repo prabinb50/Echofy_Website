@@ -28,7 +28,7 @@ const processSteps = [
 
 const WorkProcess = () => {
   return (
-    <section className="w-full bg-white py-20">
+    <section className="w-full bg-white py-12 md:py-16 lg:py-20">
       <div className="w-11/12 mx-auto space-y-15">
         {/* header */}
         <div className="text-center space-y-5">
