@@ -13,8 +13,8 @@ export default function BannerOverlay() {
                 {/* horizontal line */}
                 <hr className='text-white opacity-15' />
 
-                {/* banner content */}
-                <div className='absolute inset-x-15 bottom-30'>
+                {/* banner content*/}
+                <div className='absolute left-4 sm:left-8 md:left-12 lg:left-15 xl:inset-x-15 top-60 md:top-55 bottom-35'>
                     <BannerContent />
                 </div>
             </div>
