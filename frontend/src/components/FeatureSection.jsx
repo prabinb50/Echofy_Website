@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef, useCallback } from "react";
 import {
   Recycle,
   Droplets,
@@ -31,19 +31,46 @@ const allFeatures = [
   },
 ];
 
+// create extended array for seamless looping
+const extendedFeatures = [
+  ...allFeatures,
+  ...allFeatures,
+  ...allFeatures
+];
+
 const FeatureSection = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(allFeatures.length);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const trackRef = useRef(null);
+
+  const goToSlide = useCallback((index) => {
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setCurrentIndex(index);
+  }, [isTransitioning]);
 
   // next slide handler
   const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % allFeatures.length);
+    goToSlide(currentIndex + 1);
   };
 
   // previous slide handler
   const prevSlide = () => {
-    setCurrentIndex(
-      (prev) => (prev - 1 + allFeatures.length) % allFeatures.length
-    );
+    goToSlide(currentIndex - 1);
+  };
+
+  // Handle transition end to create infinite loop
+  const handleTransitionEnd = () => {
+    setIsTransitioning(false);
+
+    // If we're at the end of first copy, jump to start of second copy
+    if (currentIndex >= allFeatures.length * 2) {
+      setCurrentIndex(allFeatures.length);
+    }
+    // If we're before the first copy, jump to end of second copy
+    if (currentIndex < allFeatures.length) {
+      setCurrentIndex(allFeatures.length * 2 - 1);
+    }
   };
 
   return (
@@ -59,14 +86,14 @@ const FeatureSection = () => {
                 <GiMapleLeaf className="w-6 h-6 text-[#79B900]" />
 
                 {/* label text */}
-                <span className="text-[#79B900] font-semibold">
+                <span className="text-[#79B900] font-semibold text-sm md:text-base">
                   OUR SERVICES
                 </span>
               </div>
 
               {/* heading texts */}
-              <div className='opacity-85 font-bold text-2xl sm:text-3xl md:text-4xl leading-snug md:leading-tight'>
-                <h1>Echofy Provide Environment</h1>
+              <div className='opacity-85 font-bold text-2xl md:text-3xl lg:text-4xl leading-snug md:leading-tight'>
+                <h1 className="mb-1 md:mb-0">Echofy Provide Environment</h1>
                 <h1>Best Leading Services</h1>
               </div>
             </div>
@@ -95,13 +122,15 @@ const FeatureSection = () => {
         {/* cards carousel */}
         <div className="relative overflow-hidden">
           <div
-            className="flex transition-transform duration-700"
+            ref={trackRef}
+            onTransitionEnd={handleTransitionEnd}
+            className={`flex ${isTransitioning ? 'transition-transform duration-700 ease-out' : ''}`}
             style={{
-              transform: `translateX(-${currentIndex * 100}%)`
+              transform: `translateX(-${currentIndex * (100 / 3)}%)`
             }}
           >
-            {/* render cards in loop */}
-            {allFeatures.map((feature, idx) => (
+            {/* render extended cards */}
+            {extendedFeatures.map((feature, idx) => (
               <div key={idx} className="w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-2 sm:px-4 md:px-5">
                 <div className="group bg-[#f5f3f0] rounded-2xl border border-gray-100 overflow-hidden hover:bg-gray-900 cursor-pointer h-full flex flex-col">
                   {/* image section */}
@@ -160,18 +189,22 @@ const FeatureSection = () => {
           </div>
           {/* dots for mobile */}
           <div className="flex md:hidden justify-center mt-6 gap-2">
-            {allFeatures.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrentIndex(i)}
-                className={`w-3 h-3 rounded-full transition ${currentIndex === i ? 'bg-lime-500' : 'bg-gray-300'}`}
-                aria-label={`Go to slide ${i + 1}`}
-              />
-            ))}
+            {allFeatures.map((_, i) => {
+              // Calculate logical index for dot highlighting
+              const logicalIndex = ((currentIndex - allFeatures.length) % allFeatures.length + allFeatures.length) % allFeatures.length;
+              return (
+                <button
+                  key={i}
+                  onClick={() => goToSlide(allFeatures.length + i)}
+                  className={`w-3 h-3 rounded-full transition ${currentIndex === i ? 'bg-lime-500' : 'bg-gray-300'}`}
+                  aria-label={`Go to slide ${i + 1}`}
+                />
+              );
+            })}
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 
