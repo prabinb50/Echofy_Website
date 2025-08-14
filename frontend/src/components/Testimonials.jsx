@@ -4,7 +4,7 @@ import Reviews from './Reviews'
 
 export default function Testimonials() {
     return (
-        <div className='bg-[#f5f8ed] relative z-10 py-10 sm:py-12 md:py-16 lg:py-20'>
+        <div className='bg-[#f5f8ed] relative z-10 py-12 md:py-16 lg:py-20'>
             {/* custom animations for leaf icons */}
             <style>
                 {`
@@ -47,9 +47,9 @@ export default function Testimonials() {
             />
 
             {/* main content container */}
-            <div className='w-11/12 max-w-7xl mx-auto space-y-8 sm:space-y-10 md:space-y-12 lg:space-y-15'>
+            <div className='w-11/12 max-w-7xl mx-auto space-y-10 md:space-y-12 lg:space-y-15'>
                 {/* heading section */}
-                <div className='space-y-3 sm:space-y-4 md:space-y-5'>
+                <div className='space-y-4 md:space-y-5'>
                     {/* icon and label */}
                     <div className="flex items-center justify-center gap-2">
                         {/* leaf icon */}
@@ -62,8 +62,8 @@ export default function Testimonials() {
                     </div>
 
                     {/* heading texts*/}
-                    <div className='opacity-85 font-bold text-2xl sm:text-3xl md:text-4xl leading-tight text-center px-4'>
-                        <h1 className="mb-1 sm:mb-2">Clients Best Feedback About</h1>
+                    <div className='opacity-85 font-bold text-2xl md:text-3xl lg:text-4xl leading-tight text-center'>
+                        <h1 className="mb-1 md:mb-2">Clients Best Feedback About</h1>
                         <h1>Echofy Provission</h1>
                     </div>
                 </div>

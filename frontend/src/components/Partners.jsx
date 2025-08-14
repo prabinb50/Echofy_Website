@@ -21,12 +21,12 @@ export default function Partners() {
             {/* container for all content */}
             <div className='absolute inset-0 flex flex-col items-center justify-center mt-4 md:mt-0'>
                 {/* heading with decorative lines */}
-                <div className='flex items-center justify-center gap-1 sm:gap-2 mb-4 sm:mb-6 md:mb-8 px-4 text-center'>
-                    <div className='w-4 sm:w-6 md:w-10 h-[0.5px] bg-white opacity-80'></div>
+                <div className='flex items-center justify-center gap-1 md:gap-2 mb-6 md:mb-8 px-4 text-center'>
+                    <div className='w-6 md:w-10 h-[0.5px] bg-white opacity-80'></div>
 
                     <span className='font-semibold text-base sm:text-lg md:text-2xl text-white'>All over the world 100,000+ Customers</span>
 
-                    <div className='w-4 sm:w-6 md:w-10 h-[0.5px] bg-white opacity-80'></div>
+                    <div className='w-6 md:w-10 h-[0.5px] bg-white opacity-80'></div>
                 </div>
 
                 {/* partner logos container */}

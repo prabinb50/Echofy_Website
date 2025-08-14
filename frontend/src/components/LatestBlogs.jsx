@@ -21,26 +21,26 @@ export default function LatestBlogs() {
                     </div>
 
                     {/* title and button section */}
-                    <div className='flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 sm:gap-0'>
+                    <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0'>
                         {/* heading texts */}
-                        <div className='opacity-85 font-bold text-2xl sm:text-3xl md:text-4xl leading-tight'>
-                            <h1>Building a Greener Future</h1>
+                        <div className='opacity-85 font-bold text-2xl md:text-3xl lg:text-4xl leading-tight'>
+                            <h1 className="mb-1">Building a Greener Future</h1>
                             <h1>Together Forever</h1>
                         </div>
 
                         {/* view all blogs button*/}
-                        <div className="relative group inline-flex items-center justify-center sm:justify-start gap-2 py-3 px-6 sm:px-8 md:px-10 rounded-full cursor-pointer text-white overflow-hidden bg-lime-500 border border-lime-500 w-full sm:w-auto mt-2 md:mt-0">
+                        <div className="relative group inline-flex items-center justify-center md:justify-start gap-2 py-3 px-10 rounded-full cursor-pointer text-white overflow-hidden bg-lime-500 border border-lime-500 w-full md:w-auto mt-2 md:mt-0">
                             {/* hover animation background */}
                             <span className="absolute inset-0 bg-[#001819] w-0 group-hover:w-full transition-all duration-500 ease-in-out rounded-full z-0"></span>
 
                             {/* button content */}
                             <div className='flex items-center gap-2 relative z-10 transition-all duration-300 text-white'>
-                                <p className="font-medium text-sm sm:text-base">
+                                <p className="font-medium text-sm md:text-base">
                                     View All Blog
                                 </p>
 
                                 {/* leaf icon */}
-                                <BiSolidLeaf size={16} className="w-4 h-4 sm:w-5 sm:h-5" />
+                                <BiSolidLeaf size={16} className="w-4 h-4 md:w-5 md:h-5" />
                             </div>
                         </div>
                     </div>

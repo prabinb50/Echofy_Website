@@ -32,7 +32,7 @@ export default function OurSkills() {
                 src="/skill-main-shape.png"
                 alt="Skill Main Shape"
                 draggable="false"
-                className='absolute -z-10 top-0 left-0 object-cover w-24 sm:w-32 md:w-40 lg:w-50 opacity-75 animate-dance'
+                className='absolute -z-10 top-0 left-0 object-cover w-30 md:w-40 lg:w-50 opacity-75 animate-dance'
             />
 
             <div className='w-11/12 mx-auto flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-10'>
@@ -50,8 +50,8 @@ export default function OurSkills() {
                     </div>
 
                     {/* heading texts */}
-                    <div className='opacity-85 font-bold text-2xl sm:text-3xl md:text-4xl leading-tight'>
-                        <h1>Getting A Greener Future</h1>
+                    <div className='opacity-85 font-bold text-2xl md:text-3xl lg:text-4xl leading-tight'>
+                        <h1 className="mb-1">Getting A Greener Future</h1>
                         <h1>Safe Environment</h1>
                     </div>
 
