@@ -29,7 +29,7 @@ const Footer = () => {
       <img
         src="/footer-line.png"
         alt=""
-        className="absolute bottom-0 right-0 w-48 sm:w-64 md:w-80 opacity-20 pointer-events-none"
+        className="absolute bottom-0 right-0 w-48 md:w-80 opacity-20 pointer-events-none"
       />
 
       {/* social section */}
@@ -57,30 +57,30 @@ const Footer = () => {
           <img
             src="/footer-social-shape.png"
             alt=""
-            className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-12 sm:w-14 md:w-16 motion-safe:animate-[floatLeafRight_3s_ease-in-out_infinite] z-10"
+            className="absolute -right-2 top-1/2 transform -translate-y-1/2 w-12 md:w-16 motion-safe:animate-[floatLeafRight_3s_ease-in-out_infinite] z-10"
           />
 
           {/* speech bubble tail */}
-          <div className="absolute bottom-0 right-12 sm:right-16 w-0 h-0 border-l-[14px] sm:border-l-[18px] md:border-l-[20px] border-l-transparent border-r-[14px] sm:border-r-[18px] md:border-r-[20px] border-r-transparent border-t-[14px] sm:border-t-[18px] md:border-t-[20px] border-t-lime-500 transform translate-y-full z-20"></div>
+          <div className="absolute bottom-0 right-12 md:right-16 w-0 h-0 border-l-[14px]  md:border-l-[20px] border-l-transparent border-r-[14px] md:border-r-[20px] border-r-transparent border-t-[14px] md:border-t-[20px] border-t-lime-500 transform translate-y-full z-20"></div>
 
           {/* social content */}
           <div className="flex flex-col lg:flex-row justify-between items-center gap-4 relative z-10 text-center lg:text-left">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-bold">
+            <h2 className="text-lg md:text-2xl font-bold">
               Stay With Us On Social
             </h2>
 
-            <div className="flex items-center gap-3 sm:gap-4">
+            <div className="flex items-center gap-3 md:gap-4">
               <span className="font-semibold text-sm md:text-lg">
                 FOLLOW US:
               </span>
 
-              <div className="flex gap-2 sm:gap-3">
+              <div className="flex gap-2 md:gap-3">
                 {socialLinks.map(({ Icon, label }, i) => (
                   <a
                     href="#"
                     key={i}
                     aria-label={label}
-                    className="p-2 sm:p-3 rounded-full border border-white hover:bg-white hover:text-gray-800 transition-all duration-300 cursor-pointer motion-safe:animate-[floatSocial_2s_ease-in-out_infinite]"
+                    className="p-2 md:p-3 rounded-full border border-white hover:bg-white hover:text-gray-800 transition-all duration-300 cursor-pointer motion-safe:animate-[floatSocial_2s_ease-in-out_infinite]"
                     style={{ animationDelay: `${i * 0.2}s` }}
                   >
                     <Icon size={16} />
@@ -92,14 +92,14 @@ const Footer = () => {
         </div>
 
         {/* main footer content */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4 sm:px-6 lg:px-0 py-12 sm:py-16 text-white">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 px-4 md:px-6 lg:px-0 py-12 md:py-16 text-white">
           {/* column 1 - logo and contact */}
           <div>
             <div className="mb-6">
               <img
                 src="/logo.png"
                 alt="Echofy Logo"
-                className="object-cover w-28 sm:w-32"
+                className="object-cover w-28 md:w-32"
                 draggable="false"
               />
             </div>
@@ -193,12 +193,12 @@ const Footer = () => {
                 type="email"
                 id="newsletter"
                 placeholder="Enter Your E-Mail*"
-                className="w-full p-3 sm:p-4 rounded-full text-sm md:text-base placeholder-white opacity-90 border border-[#79B900] focus:outline-none focus:ring-1 focus:ring-white"
+                className="w-full p-3 md:p-4 rounded-full text-sm md:text-base placeholder-white opacity-90 border border-[#79B900] focus:outline-none focus:ring-1 focus:ring-white"
               />
 
               <button
                 type="submit"
-                className="relative group inline-flex items-center justify-center py-3 sm:py-4 rounded-full cursor-pointer text-white overflow-hidden bg-lime-500 border border-lime-500 w-full"
+                className="relative group inline-flex items-center justify-center py-3 md:py-4 rounded-full cursor-pointer text-white overflow-hidden bg-lime-500 border border-lime-500 w-full"
               >
                 <span className="absolute inset-0 bg-[#001819] w-0 group-hover:w-full transition-all duration-500 ease-in-out rounded-full"></span>
 
@@ -210,7 +210,7 @@ const Footer = () => {
 
         {/* footer bottom */}
         <div className="border-t border-gray-700">
-          <div className="text-center text-xs sm:text-sm md:text-base text-white py-6">
+          <div className="text-center text-xs md:text-base text-white py-6">
             © 2024 Echofy. All rights reserved by{" "}
 
             <span className="text-lime-400 opacity-70">Dream-IT Solution</span>
