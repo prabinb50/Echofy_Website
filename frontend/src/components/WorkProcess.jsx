@@ -31,16 +31,16 @@ const WorkProcess = () => {
     <section className="w-full bg-white py-12 md:py-16 lg:py-20">
       <div className="w-11/12 mx-auto space-y-15">
         {/* header */}
-        <div className="text-center space-y-5">
+        <div className="text-center space-y-3 md:space-y-4">
           <div className="flex items-center justify-center gap-2">
             <GiMapleLeaf className="w-6 h-6 text-[#79B900]" />
 
-            <span className="text-[#79B900] font-medium">
+            <span className="text-[#79B900] font-medium text-sm md:text-base">
               WORKING PROCESS
             </span>
           </div>
 
-          <h1 className="opacity-85 font-bold text-4xl leading-tight">
+          <h1 className="opacity-85 font-bold text-2xl md:text-3xl lg:text-4xl leading-tight">
             Process To Safe Environment
           </h1>
         </div>
@@ -88,7 +88,7 @@ const WorkProcess = () => {
                     {step.title}
                   </h3>
 
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-gray-600 text-sm md:text-base leading-relaxed">
                     {step.desc}
                   </p>
                 </div>
