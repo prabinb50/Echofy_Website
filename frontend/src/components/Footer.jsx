@@ -5,6 +5,7 @@ import {
   FaLinkedinIn,
   FaPinterestP,
 } from "react-icons/fa6";
+import { Link } from "react-router-dom";
 
 const socialLinks = [
   { Icon: FaFacebookF, label: "Facebook" },
@@ -33,7 +34,7 @@ const Footer = () => {
       />
 
       {/* social section */}
-      <div className="relative mx-auto max-w-6xl px-4 md:px-6 lg:px-8 pt-15 md:pt-17">
+      <div className="relative w-11/12 mx-auto max-w-6xl pt-15 md:pt-17">
         <div
           className="relative text-white py-6 px-6 md:px-8 rounded-2xl overflow-hidden"
           style={{
@@ -76,15 +77,15 @@ const Footer = () => {
 
               <div className="flex gap-2 md:gap-3">
                 {socialLinks.map(({ Icon, label }, i) => (
-                  <a
-                    href="#"
+                  <Link
+                    to={"/"}
                     key={i}
                     aria-label={label}
                     className="p-2 md:p-3 rounded-full border border-white hover:bg-white hover:text-gray-800 transition-all duration-300 cursor-pointer motion-safe:animate-[floatSocial_2s_ease-in-out_infinite]"
                     style={{ animationDelay: `${i * 0.2}s` }}
                   >
                     <Icon size={16} />
-                  </a>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -211,9 +212,9 @@ const Footer = () => {
         {/* footer bottom */}
         <div className="border-t border-gray-700">
           <div className="text-center text-xs md:text-base text-white py-6">
-            © 2024 Echofy. All rights reserved by{" "}
+            © 2024 Echofy. Designed and Developed by{" "}
 
-            <span className="text-lime-400 opacity-70">Dream-IT Solution</span>
+            <Link to="https://github.com/prabinb50" className="text-lime-400 opacity-70">Prabin Joshi</Link>
           </div>
         </div>
       </div>
