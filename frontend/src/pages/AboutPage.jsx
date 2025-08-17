@@ -2,6 +2,11 @@ import React from 'react'
 import Navbar from '../components/Navbar'
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoHome } from 'react-icons/io5';
+import { NavLink } from 'react-router-dom';
+import StatsOverview from '../components/StatsOverview';
+import WorkProcess from '../components/WorkProcess';
+import Partners from '../components/Partners';
+import Testimonials from '../components/Testimonials';
 
 export default function AboutPage() {
     return (
@@ -30,14 +35,14 @@ export default function AboutPage() {
 
                     {/* breadcrumb */}
                     <nav aria-label='breadcrumb' className='flex items-center justify-between gap-2 mt-4'>
-                        <div className='flex items-center gap-2 cursor-pointer'>
+                        <NavLink to="/" className='flex items-center gap-2 cursor-pointer'>
                             <IoHome
                                 color='#79B900'
                                 aria-hidden="true"
                             />
 
                             <span className="text-white hover:text-[#79B900] transition-colors duration-300">Echofy</span>
-                        </div>
+                        </NavLink>
 
                         <IoIosArrowRoundForward
                             color='white'
@@ -48,6 +53,14 @@ export default function AboutPage() {
                     </nav>
                 </div>
             </div>
+
+            <StatsOverview />
+
+            <WorkProcess />
+
+            <Partners />
+
+            <Testimonials />
         </>
     )
 }
