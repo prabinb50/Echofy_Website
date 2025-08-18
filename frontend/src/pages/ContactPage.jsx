@@ -3,7 +3,8 @@ import Navbar from "../components/Navbar";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { IoHome } from "react-icons/io5";
 import { FaMapMarkerAlt, FaPhone, FaHeadset, FaLeaf } from "react-icons/fa";
-import Footer from "../components/Footer";
+import { NavLink } from "react-router-dom";
+
 
 export default function ContactPage() {
   const [showAlert, setShowAlert] = useState(false);
@@ -16,52 +17,40 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="relative">
-        {/* background image */}
-        <img
-          src="/breadcrumb-bg.jpg"
-          alt="Breadcrumb Background"
-          draggable="false"
-          loading="lazy"
-          className="object-cover w-full h-[440px]"
-        />
+       {/* hero section */}
+            <div className="relative">
+                <img
+                    src="/breadcrumb-bg.jpg"
+                    alt="Green nature background"
+                    draggable="false"
+                    loading="lazy"
+                    className="object-cover w-full h-[440px]"
+                />
 
-        <div className="absolute inset-0">
-          {/* navbar */}
-          <Navbar />
+                <div className="absolute inset-0">
+                    <Navbar />
+                    <hr className="text-white opacity-20" />
+                </div>
 
-          {/* horizontal line */}
-          <hr className="text-white opacity-20" />
-        </div>
-
-        {/* centered text */}
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-center z-20 mt-4">
+        {/* page title + breadcrumb */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-center z-20 mt-4">
           <h1 className="text-white font-bold text-5xl">Contact Us</h1>
 
-          {/* breadcrumb */}
-          <nav
-            aria-label="breadcrumb"
-            className="flex items-center justify-between gap-2 mt-4"
-          >
-            <div className="flex items-center gap-2 cursor-pointer">
-              <IoHome color="#79B900" aria-hidden="true" />
+                    <nav aria-label="breadcrumb" className="flex items-center gap-2 mt-4">
+                        <NavLink to="/" className="flex items-center gap-2 hover:text-lime-500 transition-colors duration-300">
+                            <IoHome className="text-lime-500" aria-hidden="true" />
+                            <span className="text-white">Echofy</span>
+                        </NavLink>
 
-              <span className="text-white hover:text-[#79B900] transition-colors duration-300">
-                Echofy
-              </span>
+                        <IoIosArrowRoundForward
+                            className="text-white"
+                            size={28}
+                            aria-hidden="true"
+                        />
+                        <span className="text-white opacity-80">Contact Us</span>
+                    </nav>
+                </div>
             </div>
-
-            <IoIosArrowRoundForward
-              color="white"
-              size={28}
-              aria-hidden="true"
-            />
-            <span className="text-white opacity-80 cursor-pointer">
-              About Us
-            </span>
-          </nav>
-        </div>
-      </div>
 
       {/* contact content */}
       <div className="min-h-screen bg-gray-50 py-12">
@@ -200,7 +189,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-      <Footer />
+    
     </>
   );
 }
