@@ -5,52 +5,58 @@ import { IoHome } from "react-icons/io5";
 import { FaMapMarkerAlt, FaPhone, FaHeadset, FaLeaf } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
-
 export default function ContactPage() {
   const [showAlert, setShowAlert] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setShowAlert(true);
+    // reset the form fields
+    if (e.currentTarget && typeof e.currentTarget.reset === "function") {
+      e.currentTarget.reset();
+    }
     setTimeout(() => setShowAlert(false), 3000);
   };
 
   return (
     <>
-       {/* hero section */}
-            <div className="relative">
-                <img
-                    src="/breadcrumb-bg.jpg"
-                    alt="Green nature background"
-                    draggable="false"
-                    loading="lazy"
-                    className="object-cover w-full h-[440px]"
-                />
+      {/* hero section */}
+      <div className="relative">
+        <img
+          src="/breadcrumb-bg.jpg"
+          alt="Green nature background"
+          draggable="false"
+          loading="lazy"
+          className="object-cover w-full h-[440px]"
+        />
 
-                <div className="absolute inset-0">
-                    <Navbar />
-                    <hr className="text-white opacity-20" />
-                </div>
+        <div className="absolute inset-0">
+          <Navbar />
+          <hr className="text-white opacity-20" />
+        </div>
 
         {/* page title + breadcrumb */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-center z-20 mt-4">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col items-center justify-center text-center z-20 mt-4">
           <h1 className="text-white font-bold text-5xl">Contact Us</h1>
 
-                    <nav aria-label="breadcrumb" className="flex items-center gap-2 mt-4">
-                        <NavLink to="/" className="flex items-center gap-2 hover:text-lime-500 transition-colors duration-300">
-                            <IoHome className="text-lime-500" aria-hidden="true" />
-                            <span className="text-white">Echofy</span>
-                        </NavLink>
+          <nav aria-label="breadcrumb" className="flex items-center gap-2 mt-4">
+            <NavLink
+              to="/"
+              className="flex items-center gap-2 hover:text-lime-500 transition-colors duration-300"
+            >
+              <IoHome className="text-lime-500" aria-hidden="true" />
+              <span className="text-white">Echofy</span>
+            </NavLink>
 
-                        <IoIosArrowRoundForward
-                            className="text-white"
-                            size={28}
-                            aria-hidden="true"
-                        />
-                        <span className="text-white opacity-80">Contact Us</span>
-                    </nav>
-                </div>
-            </div>
+            <IoIosArrowRoundForward
+              className="text-white"
+              size={28}
+              aria-hidden="true"
+            />
+            <span className="text-white opacity-80">Contact Us</span>
+          </nav>
+        </div>
+      </div>
 
       {/* contact content */}
       <div className="min-h-screen bg-gray-50 py-12">
@@ -100,10 +106,10 @@ export default function ContactPage() {
 
           {/* map and Contact Form Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-10">
-            {/* Google Maps */}
+            {/* google Maps */}
             <div className="bg-white rounded-lg overflow-hidden shadow-lg h-[600px]">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387203.11012209195!2d-74.60334146958495!3d40.69546251466727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2snp!4v1755448179853!5m2!1sen!2snp"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14133.007821039148!2d85.29983103275305!3d27.678606622510877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb1931a5cdf6b3%3A0x1f744186e4b5550b!2sPeach%20Perfect%20Waxing!5e0!3m2!1sen!2snp!4v1755511089377!5m2!1sen!2snp" 
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -189,7 +195,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-    
     </>
   );
 }
